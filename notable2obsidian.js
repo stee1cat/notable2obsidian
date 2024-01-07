@@ -6,7 +6,7 @@ const fs = require('fs').promises;
 const newLine = '\n';
 const attachmentsDir = 'attachments';
 const notebookRe = /^Notebooks\//;
-const propertiesSectionRe = /^---((?:.|[\r\n])*)---/g;
+const propertiesSectionRe = /^---((?:.|[\r\n])*?)---/g;
 
 function extractProperties(data) {
     const result = {
